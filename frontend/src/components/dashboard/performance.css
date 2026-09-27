@@ -1,0 +1,16 @@
+.perf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 18px; }
+.perf-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.metric-card { display: flex; min-width: 0; flex-direction: column; gap: 8px; padding: 14px; border: 1px solid var(--border); border-radius: 14px; background: color-mix(in srgb, var(--primary) 4%, var(--surface-solid)); }
+.metric-card__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; color: var(--text-muted); font-size: 12px; font-weight: 650; }
+.metric-card__body { display: flex; align-items: center; gap: 12px; }
+.metric-card p { margin: 0; color: var(--text-muted); font-size: 12px; }
+.metric-card em { color: var(--text-muted); font-size: 11px; font-style: normal; }
+.metric-card__value { color: var(--text); font-size: 28px; font-weight: 750; line-height: 1.1; }
+.metric-card__value.is-success { color: var(--success); }
+.metric-card__value.is-warning { color: var(--orange); }
+.metric-card__value.is-danger { color: var(--danger); }
+.metric-change { display: inline-flex; align-items: center; gap: 3px; color: var(--success); font-size: 11px; font-weight: 700; }
+.metric-change.is-down { color: var(--danger); }
+.gauge { display: grid; width: 72px; height: 72px; flex: 0 0 72px; place-items: center; border-radius: 50%; }
+.gauge strong { display: grid; width: 54px; height: 54px; place-items: center; border-radius: 50%; background: var(--surface-solid); color: var(--text); font-size: 14px; }
+@media (max-width: 1180px) { .perf-grid, .perf-cards { grid-template-columns: 1fr; } }

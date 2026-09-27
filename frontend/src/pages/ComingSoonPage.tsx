@@ -1,0 +1,6 @@
+import { Construction } from "lucide-react";
+import type { AppPage } from "../App";
+import "./ComingSoonPage.css";
+interface ComingSoonPageProps { page: Exclude<AppPage, "dashboard">; }
+const pageContent: Record<Exclude<AppPage, "dashboard">, { title: string; description: string }> = { "work-orders": { title: "Work Orders", description: "Work-order management will be available here soon." }, reports: { title: "Reports", description: "Quality reporting tools are being prepared." }, "rework-scrap": { title: "Rework & Scrap", description: "Detailed rework and scrap analysis is coming soon." }, settings: { title: "Settings", description: "Workspace settings will be available here soon." }, "nc-defects": { title: "NC & Defects", description: "This area is coming soon. The database currently has no usable NC or defect data." }, "master-data": { title: "Master Data", description: "Master data views will be available here soon." } };
+export function ComingSoonPage({ page }: ComingSoonPageProps) { const { title, description } = pageContent[page]; return <section className="coming-soon"><div className="coming-soon__icon"><Construction size={28} /></div><span className="coming-soon__eyebrow">IN DEVELOPMENT</span><h1>{title}</h1><p>{description}</p></section>; }

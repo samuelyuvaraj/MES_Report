@@ -1,0 +1,14 @@
+.table-panel { margin-top: 18px; }
+.table-wrap { overflow-x: auto; }
+.data-table { width: 100%; border-collapse: collapse; }
+.data-table th, .data-table td { padding: 12px 10px; border-bottom: 1px solid var(--border); text-align: left; font-size: 13px; white-space: nowrap; }
+.data-table th { color: var(--text-muted); font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.data-table td { color: var(--text); }
+.status-pill { display: inline-flex; padding: 4px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; }
+.status-pill.is-new { color: #2872ee; background: #e8f1ff; }
+.status-pill.is-progress { color: #c67a12; background: #fff4df; }
+.status-pill.is-complete { color: #0a9a6e; background: #e5faf2; }
+.table-action { display: grid; width: 32px; height: 32px; place-items: center; border: 0; border-radius: 8px; color: var(--text-muted); background: transparent; cursor: pointer; }
+.table-action:hover { background: color-mix(in srgb, var(--primary) 10%, transparent); }
+.quality-bar { display: flex; overflow: hidden; height: 18px; margin: 18px 0 16px; border-radius: 999px; background: #e8eef8; }
+.quality-bar span { display: block; min-width: 0; height: 100%; }
